@@ -179,8 +179,6 @@ namespace draw_shapes
 					else if (j == 0 || j == size-1) array[i, j] = '│';
 					else if ((i + j) % 2 == 0){array[i, j] = '8';}
 					else if ((i + j) % 2 == 1){array[i, j] = '4';}
-
-
 				}
 			}
 
@@ -194,7 +192,6 @@ namespace draw_shapes
 						Console.ForegroundColor = ConsoleColor.White;
 						Console.Write(array[i, j]);
 						color_end();
-
 					}
 					else if (array[i, j] == '4')
 					{
@@ -202,7 +199,6 @@ namespace draw_shapes
 						Console.ForegroundColor = ConsoleColor.Black;
 						Console.Write(array[i, j]);
 						color_end();
-
 					}
 					else Console.Write(array[i, j]); 
 				}

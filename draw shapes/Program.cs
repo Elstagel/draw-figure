@@ -28,6 +28,32 @@ namespace draw_shapes
 
 		}
 
+		static void show_figure(char[,,,] array, int size)
+		{
+			for (int i = 0; i < size; i++)
+			{
+				for (int j = 0; j < size; j++)
+				{
+					for (int k = 0; k < size; k++)
+					{
+						for (int l = 0; l < size; l++)
+						{
+							if ((i + k) % 2 == 0)
+							{
+								Console.Write(array[i, j, k, l] + " ");
+							}
+							else
+							{
+								Console.Write(array[i, j, k, l] + " ");
+							}
+						}
+					}
+					Console.WriteLine();
+				}
+			}
+
+		}
+
 		static void null_qu(int size)
 		{
 			char[,] array = new char[size, size];
@@ -181,7 +207,6 @@ namespace draw_shapes
 					else if ((i + j) % 2 == 1){array[i, j] = '4';}
 				}
 			}
-
 			for (int i = 0; i < size / 2; i++)
 			{
 				for (int j = 0; j < size; j++)
@@ -232,27 +257,7 @@ namespace draw_shapes
 				}
 			}
 
-			for (int i = 0; i < size; i++)
-			{
-				for (int j = 0; j < size; j++)
-				{
-					for (int k = 0; k < size; k++)
-					{
-						for (int l = 0; l < size; l++)
-						{
-							if ((i + k) % 2 == 0)
-							{
-								Console.Write(array[i, j, k, l] + " ");
-							}
-							else
-							{
-							    Console.Write(array[i, j, k, l] + " ");	
-							}
-						}
-					}
-					Console.WriteLine();
-				}
-			}
+			show_figure(array, size);
 		}
 
 		static void color_start(int number_color)
@@ -369,7 +374,7 @@ namespace draw_shapes
 			Console.WriteLine();
 
 			color_start(13);
-			Console.WriteLine("7-фигура");
+			Console.WriteLine("7-фигура(длина уменьшина в двое )");
 			color_end();
 			seventh_qu(size);
 			Console.WriteLine();
